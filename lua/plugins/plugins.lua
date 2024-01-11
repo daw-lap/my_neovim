@@ -95,7 +95,17 @@ local plugins = {
         end,
       })
     end
-  }
+  },
+  {
+    "marmal95/nvim-cursor-number",
+    cmd = { 'ConvertCursorNumber' },
+    config = function(_, opts)
+      require('cursor_number').setup(opts)
+    end,
+    opts = {
+      require ("nvim-cursor-number-settings")
+    }
+  },
 }
 
 return plugins
